@@ -54,7 +54,7 @@ open class MonthYearPickerView: UIControl {
         }
     }
 
-    lazy fileprivate var pickerView: UIPickerView = {
+    lazy private var pickerView: UIPickerView = {
         let pickerView = UIPickerView(frame: self.bounds)
         pickerView.dataSource = self
         pickerView.delegate = self
@@ -62,13 +62,13 @@ open class MonthYearPickerView: UIControl {
         return pickerView
     }()
 
-    lazy fileprivate var monthDateFormatter: DateFormatter = {
+    lazy private var monthDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.setLocalizedDateFormatFromTemplate("MMMM")
         return formatter
     }()
     
-    lazy fileprivate var yearDateFormatter: DateFormatter = {
+    lazy private var yearDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.setLocalizedDateFormatFromTemplate("y")
         return formatter

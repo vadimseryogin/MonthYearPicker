@@ -8,30 +8,19 @@
 
 Pod::Spec.new do |s|
   s.name             = "MonthYearPicker"
-  s.version          = "3.0.0"
+  s.version          = "4.0.0"
   s.summary          = "A UIControl subclass that allows users to select month and year"
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description      = <<-DESC
     `UIDatePicker` doesn't have a mode for month/year, which is commonly used
 in credit card forms. MonthYearPicker is a `UIControl` subclass that displays
  localised months and years.
                        DESC
-
   s.homepage         = "https://github.com/alexanderedge/MonthYearPicker"
   s.license          = 'MIT'
   s.author           = { "Alexander Edge" => "alex@alexedge.co.uk" }
   s.source           = { :git => "https://github.com/alexanderedge/MonthYearPicker.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/alexedge'
-
+  s.swift_version = '5.2'
   s.platform     = :ios, '8.0'
-  s.requires_arc = true
-
   s.source_files = 'Sources/**/*'
   s.frameworks = 'UIKit'
-
 end

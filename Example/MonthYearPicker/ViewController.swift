@@ -25,33 +25,17 @@
 import UIKit
 import MonthYearPicker
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
         let picker = MonthYearPickerView(frame: CGRect(origin: CGPoint(x: 0, y: (view.bounds.height - 216) / 2), size: CGSize(width: view.bounds.width, height: 216)))
         picker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         view.addSubview(picker)
-        
     }
 
-    func dateChanged(_ picker: MonthYearPickerView) {
+    @objc func dateChanged(_ picker: MonthYearPickerView) {
         print("date changed: \(picker.date)")
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
