@@ -1,8 +1,8 @@
 # MonthYearPicker
 
-[![Version](https://img.shields.io/cocoapods/v/MonthYearPicker.svg?style=flat)](http://cocoapods.org/pods/MonthYearPicker)
-[![License](https://img.shields.io/cocoapods/l/MonthYearPicker.svg?style=flat)](http://cocoapods.org/pods/MonthYearPicker)
-[![Platform](https://img.shields.io/cocoapods/p/MonthYearPicker.svg?style=flat)](http://cocoapods.org/pods/MonthYearPicker)
+[![Version](https://img.shields.io/cocoapods/v/MonthYearPicker.svg?style=flat)](https://cocoapods.org/pods/MonthYearPicker)
+[![License](https://img.shields.io/cocoapods/l/MonthYearPicker.svg?style=flat)](https://cocoapods.org/pods/MonthYearPicker)
+[![Platform](https://img.shields.io/cocoapods/p/MonthYearPicker.svg?style=flat)](https://cocoapods.org/pods/MonthYearPicker)
 
 This is a `UIControl` subclass that allows date selection using month / year, unlike `UIDatePicker` which displays year, month, and day. This makes `MonthYearPicker` useful for credit card expiry dates, for example. It is locale-aware and shows localised values.
 
