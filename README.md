@@ -12,7 +12,7 @@ This is a `UIControl` subclass that allows date selection using month and year, 
 
 Initialise `MonthYearPicker` in the same way you would a `UIPickerView` instance.
 
-```
+```swift
 let picker = MonthYearPickerView(frame: CGRect(origin: CGPoint(x: 0, y: (view.bounds.height - 216) / 2), size: CGSize(width: view.bounds.width, height: 216)))
 picker.minimumDate = Date()
 picker.maximumDate = Calendar.current.date(byAdding: .year, value: 10, to: Date())
