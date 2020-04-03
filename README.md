@@ -26,12 +26,19 @@ iOS 9.0 or later
 
 ## Installation
 
-MonthYearPicker is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+MonthYearPicker is available through [CocoaPods](http://cocoapods.org) or Swift Package Manager. 
+
+### CocoaPods
+
+Add the following line to your Podfile:
 
 ```ruby
-pod "MonthYearPicker", '~> 4.0.1'
+pod "MonthYearPicker", '~> 4.0.2'
 ```
+
+### Swift Package Manager
+
+From within Xcode, select _File_ → _Swift Packages_ → _Add Package Dependency..._ and enter `https://github.com/alexanderedge/MonthYearPicker.git`.
 
 ## Author
 
