@@ -1,5 +1,5 @@
 PODS:
-  - MonthYearPicker (3.0.0)
+  - MonthYearPicker (4.0.0)
 
 DEPENDENCIES:
   - MonthYearPicker (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MonthYearPicker: a5b3e4187c6a7f492908737e6d32824137f4824b
+  MonthYearPicker: 7a819ac2daf4b7a1944adeddcae04b375e908c0c
 
-PODFILE CHECKSUM: 74348d457eef79b002f780e8895ec9c79fc4ed40
+PODFILE CHECKSUM: 18d4c8f7323c51c86d7c726a0e1eb586b488ede3
 
 COCOAPODS: 1.9.1

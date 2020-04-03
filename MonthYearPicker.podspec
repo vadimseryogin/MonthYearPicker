@@ -20,7 +20,7 @@ in credit card forms. MonthYearPicker is a `UIControl` subclass that displays
   s.author           = { "Alexander Edge" => "alex@alexedge.co.uk" }
   s.source           = { :git => "https://github.com/alexanderedge/MonthYearPicker.git", :tag => s.version.to_s }
   s.swift_version = '5.2'
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '9.0'
   s.source_files = 'Sources/**/*'
   s.frameworks = 'UIKit'
 end

@@ -30,6 +30,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let picker = MonthYearPickerView(frame: CGRect(origin: CGPoint(x: 0, y: (view.bounds.height - 216) / 2), size: CGSize(width: view.bounds.width, height: 216)))
+        picker.minimumDate = Date()
+        picker.maximumDate = Calendar.current.date(byAdding: .year, value: 10, to: Date())
         picker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
         view.addSubview(picker)
     }

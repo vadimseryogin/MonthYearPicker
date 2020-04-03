@@ -1,6 +1,6 @@
 {
   "name": "MonthYearPicker",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "summary": "A UIControl subclass that allows users to select month and year",
   "description": "`UIDatePicker` doesn't have a mode for month/year, which is commonly used\nin credit card forms. MonthYearPicker is a `UIControl` subclass that displays\n localised months and years.",
   "homepage": "https://github.com/alexanderedge/MonthYearPicker",
@@ -10,11 +10,11 @@
   },
   "source": {
     "git": "https://github.com/alexanderedge/MonthYearPicker.git",
-    "tag": "3.0.0"
+    "tag": "4.0.0"
   },
   "swift_versions": "5.2",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "Sources/**/*",
   "frameworks": "UIKit",
