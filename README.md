@@ -6,7 +6,10 @@
 
 This is a `UIControl` subclass that allows date selection using month and year, unlike `UIDatePicker` which displays year, month, and day. This makes `MonthYearPicker` useful for credit card expiry dates, for example. It is locale-aware and shows localised values. It also supports Dynamic Type and dark mode where available.
 
-![Screenshot](https://raw.githubusercontent.com/alexanderedge/MonthYearPicker/master/screenshot.png)
+|Light|Dark|
+|-|-|
+|![Simulator Screen Shot - iPhone 11 Pro Max - 2020-04-03 at 19 20 08](https://user-images.githubusercontent.com/996926/78392513-417c2300-75e0-11ea-8678-c970f0dd7611.png)|![Simulator Screen Shot - iPhone 11 Pro Max - 2020-04-03 at 19 20 13](https://user-images.githubusercontent.com/996926/78392530-4a6cf480-75e0-11ea-8dee-678f4fac517f.png)|
+
 
 ## Usage
 
