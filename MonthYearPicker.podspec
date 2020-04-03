@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MonthYearPicker"
-  s.version          = "4.0.0"
+  s.version          = "4.0.1"
   s.summary          = "A UIControl subclass that allows users to select month and year"
   s.description      = <<-DESC
     `UIDatePicker` doesn't have a mode for month/year, which is commonly used
@@ -21,6 +21,6 @@ in credit card forms. MonthYearPicker is a `UIControl` subclass that displays
   s.source           = { :git => "https://github.com/alexanderedge/MonthYearPicker.git", :tag => s.version.to_s }
   s.swift_version = '5.2'
   s.platform     = :ios, '9.0'
-  s.source_files = 'Sources/**/*'
+  s.source_files = 'Sources/MonthYearPicker/**/*.swift'
   s.frameworks = 'UIKit'
 end

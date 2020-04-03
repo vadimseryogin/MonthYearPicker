@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MonthYearPicker: 7a819ac2daf4b7a1944adeddcae04b375e908c0c
+  MonthYearPicker: e05ae1faa6abe4d50abebc9991e7af3fc5a1f2a4
 
 PODFILE CHECKSUM: 18d4c8f7323c51c86d7c726a0e1eb586b488ede3
 

@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		02344D7A677D46668A1EE72D35F34BFE /* Pods-MonthYearPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FE12E79E4D218E79A7C0AD0894958C /* Pods-MonthYearPicker_Example-dummy.m */; };
-		12F77583E37F64E03F44DA04A3266361 /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEF0508FFF845B47D0BC8E1991F2DBE /* MonthYearPickerView.swift */; };
-		37562363D8FD37F42E8410F654850605 /* MonthYearPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF899DED0F704A2E21758503BCF67AC4 /* MonthYearPicker-dummy.m */; };
+		37562363D8FD37F42E8410F654850605 /* MonthYearPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EED38DB6F46C8D1F876B59D67A3CD1 /* MonthYearPicker-dummy.m */; };
 		3F53F4D60F3B966DD04B3C1032969DC7 /* Pods-MonthYearPicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D27BC66D5A6FDC2BC29445C506369C19 /* Pods-MonthYearPicker_Tests-dummy.m */; };
 		743AA70FE3BF802288D7CDC06078F55A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
 		84BAFF202D709734721FE6D0EAD23B6B /* Pods-MonthYearPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55F276CE9EE8152CB76C79042CA34723 /* Pods-MonthYearPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97A39398E1A35C4C0F88A20233C3569E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
 		AA711AFBC067C59C766666FD70051C4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		B85366786ADB5B56A09D3C75D64C0DD5 /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FF41A434FBD59E45DE895B3308367 /* MonthYearPickerView.swift */; };
 		E0306391D48D9FDC4DDEBB64F0FE00AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		E5998D62D63E08E17310644EE625323F /* MonthYearPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42E63486EB3369F212241FD0E932CBF4 /* MonthYearPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5998D62D63E08E17310644EE625323F /* MonthYearPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BCBCD1B4A7C2DC03A8E0D7A013A79AD5 /* MonthYearPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F183D2971490AB80E41B3B5CC6FD0178 /* Pods-MonthYearPicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50049FB5C459E77A00EB4EA593A952CB /* Pods-MonthYearPicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -38,41 +38,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B0E99EF96FD000332600ECB9428741 /* MonthYearPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MonthYearPicker.modulemap; sourceTree = "<group>"; };
 		02FE12E79E4D218E79A7C0AD0894958C /* Pods-MonthYearPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MonthYearPicker_Example-dummy.m"; sourceTree = "<group>"; };
 		0DCE838543218B58AB62160C346DE3D0 /* Pods-MonthYearPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MonthYearPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0FF91771FE79EE4237CE665CE2FD0176 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		21B34056691A8DAD8461F965DF8931F7 /* Pods-MonthYearPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MonthYearPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		3265EEB6EA84904E2EEB204EEB091E7F /* Pods-MonthYearPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MonthYearPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		35E510AA3F86E4A3B04D5F5568555AB4 /* Pods-MonthYearPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MonthYearPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3A1D75C04FDC88D001BBD6234787C7CA /* Pods-MonthYearPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MonthYearPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3DE3A47D08938A6106D425EF0C250BF9 /* MonthYearPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MonthYearPicker.modulemap; sourceTree = "<group>"; };
 		40E8F0222B3E6910FB2567A492FE5292 /* Pods-MonthYearPicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MonthYearPicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		42E63486EB3369F212241FD0E932CBF4 /* MonthYearPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MonthYearPicker-umbrella.h"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		44F783670D3BF01F009E9F2769529446 /* Pods-MonthYearPicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MonthYearPicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		50049FB5C459E77A00EB4EA593A952CB /* Pods-MonthYearPicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MonthYearPicker_Tests-umbrella.h"; sourceTree = "<group>"; };
 		55F276CE9EE8152CB76C79042CA34723 /* Pods-MonthYearPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MonthYearPicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		6118C5BCC0D1316BBDCE702BD1A1B21D /* MonthYearPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MonthYearPicker-Info.plist"; sourceTree = "<group>"; };
+		56D9DB7C8B2DBA0EC3D28C68AC438426 /* MonthYearPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MonthYearPicker-prefix.pch"; sourceTree = "<group>"; };
+		581F6BB119DA0E63B021F4680D89183F /* MonthYearPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MonthYearPicker.release.xcconfig; sourceTree = "<group>"; };
 		65BB5E4CB274C22EA78B206E9D5A1D2A /* Pods_MonthYearPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MonthYearPicker_Example.framework; path = "Pods-MonthYearPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C8584BE476DC5068D8D6362F5290294 /* MonthYearPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MonthYearPicker-prefix.pch"; sourceTree = "<group>"; };
+		6CF16E36A65E777315FB25C48A48784B /* MonthYearPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MonthYearPicker.debug.xcconfig; sourceTree = "<group>"; };
 		701FD8ACF5CB517E4B210C55293BE900 /* MonthYearPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MonthYearPicker.framework; path = MonthYearPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BEF0508FFF845B47D0BC8E1991F2DBE /* MonthYearPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonthYearPickerView.swift; path = Sources/MonthYearPickerView.swift; sourceTree = "<group>"; };
-		8635B0CE77BE749FC3331E73D61926DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		781FF41A434FBD59E45DE895B3308367 /* MonthYearPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MonthYearPickerView.swift; path = Sources/MonthYearPicker/MonthYearPickerView.swift; sourceTree = "<group>"; };
 		8638BA05F57061DD446BE3A99A88D066 /* Pods-MonthYearPicker_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MonthYearPicker_Tests-Info.plist"; sourceTree = "<group>"; };
-		9045ED50572B05B28C9B566E5311C481 /* MonthYearPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MonthYearPicker.release.xcconfig; sourceTree = "<group>"; };
+		9C6B57729315745396A2E04BD2A418D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCBCD1B4A7C2DC03A8E0D7A013A79AD5 /* MonthYearPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MonthYearPicker-umbrella.h"; sourceTree = "<group>"; };
 		BFEE8B7F15D8E1997178DCEAF98B4147 /* Pods-MonthYearPicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MonthYearPicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C5EED38DB6F46C8D1F876B59D67A3CD1 /* MonthYearPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MonthYearPicker-dummy.m"; sourceTree = "<group>"; };
 		C60B6588AE874BB1EE207678AABB8545 /* Pods-MonthYearPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MonthYearPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		CB0A2543B2E53B9FCDDCC657A4B2E013 /* MonthYearPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MonthYearPicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D27BC66D5A6FDC2BC29445C506369C19 /* Pods-MonthYearPicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MonthYearPicker_Tests-dummy.m"; sourceTree = "<group>"; };
-		D51025550DA7C292B92317F11C2F733E /* MonthYearPicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MonthYearPicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D6D6ECC22F47092F0A13839E503CE425 /* Pods-MonthYearPicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MonthYearPicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		DBD3A19F19B4107405AB603FC549F908 /* Pods_MonthYearPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MonthYearPicker_Tests.framework; path = "Pods-MonthYearPicker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59D0BD209AAFAE6A86A267F60276BE9 /* Pods-MonthYearPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MonthYearPicker_Example.modulemap"; sourceTree = "<group>"; };
 		ED4BEFEE44A95450D1FEAF9BF474C1E4 /* Pods-MonthYearPicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MonthYearPicker_Tests.modulemap"; sourceTree = "<group>"; };
-		F2DAC3591B732943E6BE7434C829DA1A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F7C27262281CC670534DE4BB9A3AA7D2 /* MonthYearPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MonthYearPicker.debug.xcconfig; sourceTree = "<group>"; };
 		FE567EFD9B481E01AB21441D32D72458 /* Pods-MonthYearPicker_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MonthYearPicker_Example-Info.plist"; sourceTree = "<group>"; };
-		FF899DED0F704A2E21758503BCF67AC4 /* MonthYearPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MonthYearPicker-dummy.m"; sourceTree = "<group>"; };
+		FFB9A6CF284A4D90DFE478DE903CBDF4 /* MonthYearPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MonthYearPicker-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		03904C3BA73E5CFC20E3306F7394F940 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2748524A2BFBCE78DFEDE992876484D5 /* MonthYearPicker */,
+				C02BCDD772FE12796DDA7BE4DD614322 /* MonthYearPicker */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -118,42 +118,6 @@
 				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2092E1E8D5098A1F884A10C4BF322DA2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				01B0E99EF96FD000332600ECB9428741 /* MonthYearPicker.modulemap */,
-				FF899DED0F704A2E21758503BCF67AC4 /* MonthYearPicker-dummy.m */,
-				6118C5BCC0D1316BBDCE702BD1A1B21D /* MonthYearPicker-Info.plist */,
-				6C8584BE476DC5068D8D6362F5290294 /* MonthYearPicker-prefix.pch */,
-				42E63486EB3369F212241FD0E932CBF4 /* MonthYearPicker-umbrella.h */,
-				F7C27262281CC670534DE4BB9A3AA7D2 /* MonthYearPicker.debug.xcconfig */,
-				9045ED50572B05B28C9B566E5311C481 /* MonthYearPicker.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MonthYearPicker";
-			sourceTree = "<group>";
-		};
-		2748524A2BFBCE78DFEDE992876484D5 /* MonthYearPicker */ = {
-			isa = PBXGroup;
-			children = (
-				7BEF0508FFF845B47D0BC8E1991F2DBE /* MonthYearPickerView.swift */,
-				3382932F157236C4D52FFA9BCCC707B6 /* Pod */,
-				2092E1E8D5098A1F884A10C4BF322DA2 /* Support Files */,
-			);
-			name = MonthYearPicker;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		3382932F157236C4D52FFA9BCCC707B6 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8635B0CE77BE749FC3331E73D61926DC /* LICENSE */,
-				D51025550DA7C292B92317F11C2F733E /* MonthYearPicker.podspec */,
-				F2DAC3591B732943E6BE7434C829DA1A /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		3ED9051F78616376FA3DBA753EB7D247 /* Pods-MonthYearPicker_Tests */ = {
@@ -199,6 +163,17 @@
 			path = "Target Support Files/Pods-MonthYearPicker_Example";
 			sourceTree = "<group>";
 		};
+		C02BCDD772FE12796DDA7BE4DD614322 /* MonthYearPicker */ = {
+			isa = PBXGroup;
+			children = (
+				781FF41A434FBD59E45DE895B3308367 /* MonthYearPickerView.swift */,
+				E37901AE69045D7033124647EDC56A51 /* Pod */,
+				F5317F0461DF825E8DFBB6B1D7E01368 /* Support Files */,
+			);
+			name = MonthYearPicker;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +194,16 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		E37901AE69045D7033124647EDC56A51 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0FF91771FE79EE4237CE665CE2FD0176 /* LICENSE */,
+				CB0A2543B2E53B9FCDDCC657A4B2E013 /* MonthYearPicker.podspec */,
+				9C6B57729315745396A2E04BD2A418D8 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		EA870242436F71EF097D3CDBCA13A2D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +212,21 @@
 				DBD3A19F19B4107405AB603FC549F908 /* Pods_MonthYearPicker_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F5317F0461DF825E8DFBB6B1D7E01368 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE3A47D08938A6106D425EF0C250BF9 /* MonthYearPicker.modulemap */,
+				C5EED38DB6F46C8D1F876B59D67A3CD1 /* MonthYearPicker-dummy.m */,
+				FFB9A6CF284A4D90DFE478DE903CBDF4 /* MonthYearPicker-Info.plist */,
+				56D9DB7C8B2DBA0EC3D28C68AC438426 /* MonthYearPicker-prefix.pch */,
+				BCBCD1B4A7C2DC03A8E0D7A013A79AD5 /* MonthYearPicker-umbrella.h */,
+				6CF16E36A65E777315FB25C48A48784B /* MonthYearPicker.debug.xcconfig */,
+				581F6BB119DA0E63B021F4680D89183F /* MonthYearPicker.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MonthYearPicker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37562363D8FD37F42E8410F654850605 /* MonthYearPicker-dummy.m in Sources */,
-				12F77583E37F64E03F44DA04A3266361 /* MonthYearPickerView.swift in Sources */,
+				B85366786ADB5B56A09D3C75D64C0DD5 /* MonthYearPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +447,7 @@
 		};
 		57BE97356054D3011D8D7608F790AEC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7C27262281CC670534DE4BB9A3AA7D2 /* MonthYearPicker.debug.xcconfig */;
+			baseConfigurationReference = 6CF16E36A65E777315FB25C48A48784B /* MonthYearPicker.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -669,7 +669,7 @@
 		};
 		E2208460C0F8A46458B23A2A922D96EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9045ED50572B05B28C9B566E5311C481 /* MonthYearPicker.release.xcconfig */;
+			baseConfigurationReference = 581F6BB119DA0E63B021F4680D89183F /* MonthYearPicker.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

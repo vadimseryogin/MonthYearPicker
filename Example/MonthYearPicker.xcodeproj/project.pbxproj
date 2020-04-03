@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10A887D5B17DA8E26AC50B3D /* MonthYearPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MonthYearPicker.podspec; path = ../MonthYearPicker.podspec; sourceTree = "<group>"; };
+		10A887D5B17DA8E26AC50B3D /* MonthYearPicker.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MonthYearPicker.podspec; path = ../MonthYearPicker.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		17D0337E12BA55C1F44215D2 /* Pods-MonthYearPicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonthYearPicker_Tests.release.xcconfig"; path = "Target Support Files/Pods-MonthYearPicker_Tests/Pods-MonthYearPicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2BAF15111DF821D674D8BA14 /* Pods-MonthYearPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonthYearPicker_Example.debug.xcconfig"; path = "Target Support Files/Pods-MonthYearPicker_Example/Pods-MonthYearPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MonthYearPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonthYearPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };

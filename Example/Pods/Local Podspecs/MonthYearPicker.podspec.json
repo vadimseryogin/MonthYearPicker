@@ -16,7 +16,7 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "Sources/**/*",
+  "source_files": "Sources/MonthYearPicker/**/*.swift",
   "frameworks": "UIKit",
   "swift_version": "5.2"
 }
