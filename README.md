@@ -22,7 +22,7 @@ view.addSubview(picker)
 
 ## Requirements
 
-iOS 8.0 or later
+iOS 9.0 or later
 
 ## Installation
 
