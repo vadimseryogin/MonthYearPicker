@@ -54,6 +54,8 @@ open class MonthYearPickerView: UIControl {
             }
             setDate(date, animated: true)
             sendActions(for: .valueChanged)
+            onChange?(date)
+            onChangeRange?(date...endDate)
         }
     }
 
@@ -62,6 +64,8 @@ open class MonthYearPickerView: UIControl {
         didSet {
             monthDateFormatter.calendar = calendar
             monthDateFormatter.timeZone = calendar.timeZone
+            quarterDateFormatter.calendar = calendar
+            quarterDateFormatter.timeZone = calendar.timeZone
             yearDateFormatter.calendar = calendar
             yearDateFormatter.timeZone = calendar.timeZone
         }
@@ -73,6 +77,13 @@ open class MonthYearPickerView: UIControl {
             calendar.locale = locale
             monthDateFormatter.locale = locale
             yearDateFormatter.locale = locale
+        }
+    }
+
+    open var mode: Mode = .monthAndYear {
+        didSet {
+            pickerView.reloadAllComponents()
+            setDate(date, animated: false)
         }
     }
 
@@ -89,43 +100,58 @@ open class MonthYearPickerView: UIControl {
         formatter.setLocalizedDateFormatFromTemplate("MMMM")
         return formatter
     }()
-    
+
+    lazy private var quarterDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.setLocalizedDateFormatFromTemplate("Q")
+        formatter.locale = Locale(identifier: "en")
+        return formatter
+    }()
+
     lazy private var yearDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.setLocalizedDateFormatFromTemplate("y")
         return formatter
     }()
-    
-    fileprivate enum Component: Int {
-        case month
-        case year
-    }
-    
+
+    open var onChange: ((Date) -> Void)?
+
+    open var onChangeRange: ((ClosedRange<Date>) -> Void)?
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialSetup()
     }
-    
+
     private func initialSetup() {
         addSubview(pickerView)
         calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         setDate(date, animated: false)
     }
 
+    open override func layoutSubviews() {
+        for view in subviews { view.frame = bounds }
+    }
+
     /// if animated is YES, animate the wheels of time to display the new date
+    /// http://www.openradar.me/35247464 .quarter bug still exists
     open func setDate(_ date: Date, animated: Bool) {
-        guard let yearRange = calendar.maximumRange(of: .year), let monthRange = calendar.maximumRange(of: .month) else {
-            return
-        }
-        let month = calendar.component(.month, from: date) - monthRange.lowerBound
-        pickerView.selectRow(month, inComponent: .month, animated: animated)
+        guard let monthRange = calendar.maximumRange(of: .month),
+              let quarterRange = calendar.maximumRange(of: .quarter),
+              let yearRange = calendar.maximumRange(of: .year) else { return }
+        let monthComponent = calendar.component(.month, from: date)
+        let month = monthComponent - monthRange.lowerBound
+        pickerView.selectRow(month, inComponent: .month, animated: animated, inMode: mode)
+        let quarterComponent = (Double(monthComponent) / 3).rounded(.up)
+        let quarter = Int(quarterComponent) - quarterRange.lowerBound
+        pickerView.selectRow(quarter, inComponent: .quarter, animated: animated, inMode: mode)
         let year = calendar.component(.year, from: date) - yearRange.lowerBound
-        pickerView.selectRow(year, inComponent: .year, animated: animated)
+        pickerView.selectRow(year, inComponent: .year, animated: animated, inMode: mode)
         pickerView.reloadAllComponents()
     }
 
@@ -136,39 +162,54 @@ open class MonthYearPickerView: UIControl {
         if let maximumDate = maximumDate, calendar.compare(date, to: maximumDate, toGranularity: .month) == .orderedDescending { return false }
         return true
     }
-    
 }
 
 extension MonthYearPickerView: UIPickerViewDelegate {
-    
+
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         var dateComponents = calendar.dateComponents([.hour, .minute, .second], from: date)
-        dateComponents.year = value(for: pickerView.selectedRow(inComponent: .year), representing: .year)
-        dateComponents.month = value(for: pickerView.selectedRow(inComponent: .month), representing: .month)
+        if mode == .quaterAndYear {
+            if let quarter = value(for: pickerView.selectedRow(inComponent: .quarter, inMode: mode), representing: .quarter) {
+                dateComponents.month = 3 * (quarter - 1) + 1
+            }
+        } else {
+            dateComponents.month = value(for: pickerView.selectedRow(inComponent: .month, inMode: mode), representing: .month)
+        }
+        dateComponents.year = value(for: pickerView.selectedRow(inComponent: .year, inMode: mode), representing: .year)
         guard let date = calendar.date(from: dateComponents) else { return }
         self.date = date
     }
-    
+
 }
 
 extension MonthYearPickerView: UIPickerViewDataSource {
-    
+
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        switch mode {
+        case .monthAndYear:
+            return 2
+        case .quaterAndYear:
+            return 2
+        case .yearOnly:
+            return 1
+        }
     }
-    
+
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        guard let component = Component(rawValue: component) else { return 0 }
+        guard let component = Component(rawValue: component, mode) else { return 0 }
         switch component {
         case .month:
             return calendar.maximumRange(of: .month)?.count ?? 0
+        case .quarter:
+            return calendar.maximumRange(of: .quarter)?.count ?? 0
         case .year:
             return calendar.maximumRange(of: .year)?.count ?? 0
         }
     }
 
-    private func value(for row: Int, representing component: Calendar.Component) -> Int? {
+    private func value(for row: Int?, representing component: Calendar.Component) -> Int? {
         guard let range = calendar.maximumRange(of: component) else { return nil }
+        guard let row = row else { return nil }
         return range.lowerBound + row
     }
 
@@ -185,16 +226,30 @@ extension MonthYearPickerView: UIPickerViewDataSource {
             return label
         }()
 
-        guard let component = Component(rawValue: component) else { return label }
+        guard let component = Component(rawValue: component, mode) else { return label }
         var dateComponents = calendar.dateComponents([.hour, .minute, .second], from: date)
 
-        switch component {
-            case .month:
+        switch mode {
+        case .monthAndYear:
+            if component == .month {
                 dateComponents.month = value(for: row, representing: .month)
-                dateComponents.year = value(for: pickerView.selectedRow(inComponent: .year), representing: .year)
-            case .year:
-                dateComponents.month = value(for: pickerView.selectedRow(inComponent: .month), representing: .month)
+                dateComponents.year = value(for: pickerView.selectedRow(inComponent: .year, inMode: mode), representing: .year)
+            } else if component == .year {
+                dateComponents.month = value(for: pickerView.selectedRow(inComponent: .month, inMode: mode), representing: .month)
                 dateComponents.year = value(for: row, representing: .year)
+            }
+        case .quaterAndYear:
+            if component == .quarter {
+                dateComponents.quarter = value(for: row, representing: .quarter)
+                dateComponents.year = value(for: pickerView.selectedRow(inComponent: .year, inMode: mode), representing: .year)
+            } else if component == .year {
+                dateComponents.quarter = value(for: pickerView.selectedRow(inComponent: .quarter, inMode: mode), representing: .quarter)
+                dateComponents.year = value(for: row, representing: .year)
+            }
+        case .yearOnly:
+            if component == .year {
+                dateComponents.year = value(for: row, representing: .year)
+            }
         }
 
         guard let date = calendar.date(from: dateComponents) else { return label }
@@ -204,6 +259,10 @@ extension MonthYearPickerView: UIPickerViewDataSource {
                 label.text = monthDateFormatter.string(from: date)
             case .year:
                 label.text = yearDateFormatter.string(from: date)
+            case .quarter:
+                if let quarter = dateComponents.quarter {
+                    label.text = "Q\(quarter)"
+                }
         }
 
         if #available(iOS 13.0, *) {
@@ -216,12 +275,79 @@ extension MonthYearPickerView: UIPickerViewDataSource {
     }
 }
 
-private extension UIPickerView {
-    func selectedRow(inComponent component: MonthYearPickerView.Component) -> Int {
-        selectedRow(inComponent: component.rawValue)
+fileprivate enum Component: Int {
+
+    init?(rawValue: Int, _ mode: Mode) {
+        switch (rawValue, mode) {
+        case (0, .monthAndYear):
+            self = .month
+        case (0, .quaterAndYear):
+            self = .quarter
+        case (1, .monthAndYear), (1, .quaterAndYear), (0, .yearOnly):
+            self = .year
+        default:
+            return nil
+        }
     }
 
-    func selectRow(_ row: Int, inComponent component: MonthYearPickerView.Component, animated: Bool) {
-        selectRow(row, inComponent: component.rawValue, animated: animated)
+    case month
+    case quarter
+    case year
+
+    func rawValue(_ mode: Mode) -> Int? {
+        switch (self, mode) {
+        case (.month, .monthAndYear), (.quarter, .quaterAndYear), (.year, .yearOnly):
+            return 0
+        case (.year, .monthAndYear), (.year, .quaterAndYear):
+            return 1
+        default:
+            return nil
+        }
     }
 }
+
+public enum Mode {
+    case monthAndYear
+    case quaterAndYear
+    case yearOnly
+}
+
+private extension UIPickerView {
+    func selectedRow(inComponent component: Component, inMode mode: Mode) -> Int? {
+        guard let component = component.rawValue(mode) else { return nil }
+        return selectedRow(inComponent: component)
+    }
+
+    func selectRow(_ row: Int, inComponent component: Component, animated: Bool, inMode mode: Mode) {
+        guard let component = component.rawValue(mode) else { return }
+        selectRow(row, inComponent: component, animated: animated)
+    }
+}
+
+extension MonthYearPickerView {
+
+    private var endDate: Date {
+        switch mode {
+        case .monthAndYear:
+            return endOfMonth
+        case .quaterAndYear:
+            return endOfQuarter
+        case .yearOnly:
+            return endOfYear
+        }
+    }
+
+    private var endOfMonth: Date {
+        Calendar.current.date(byAdding: DateComponents(month: 1, second: -1), to: date)!
+    }
+
+    private var endOfQuarter: Date {
+        Calendar.current.date(byAdding: DateComponents(month: 3, second: -1), to: date)!
+    }
+
+    private var endOfYear: Date {
+        Calendar.current.date(byAdding: DateComponents(year: 1, second: -1), to: date)!
+    }
+
+}
+
